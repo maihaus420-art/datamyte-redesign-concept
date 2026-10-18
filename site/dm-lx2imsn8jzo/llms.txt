@@ -1,0 +1,22 @@
+# DATAMYTE (concept sketch, not published by DataMyte)
+> Sketch by chrismai.ai of an AI-agent-readable summary for datamyte.com. DataMyte's live robots.txt currently blocks GPTBot, ChatGPT-User, Google-Extended, anthropic-ai, CCBot and others, so whether to publish anything like this is DataMyte's choice.
+
+DATAMYTE (ASI DATAMYTE, Inc., Plymouth, MN) makes production and quality management software and hardware for manufacturers.
+
+## Products
+- [Digital Clipboard](https://datamyte.com/digital-clipboard-expert/): no-code + AI workflows for inspections, audits, checklists and corrective actions. Plans from $19 and $39 per user/month billed annually; 14-day free trial.
+- [Pricing](https://datamyte.com/pricing/)
+- [QPS PRO](https://datamyte.com/qps-pro/): digital APQP, PFMEA, DFMEA.
+- [DataMetrics SPC](https://datamyte.com/datamyte-datametrics/)
+- [Escalate](https://datamyte.com/escalate/)
+- [LightStar torque wrenches](https://datamyte.com/lightstar/) and [Revolution data collectors](https://datamyte.com/revolution/)
+
+## AI features
+- CONVERT-ai: turns paper forms, images or Office documents into workflows.
+- Compose-ai: builds a workflow from a natural-language prompt.
+
+## Trust
+- ISO/IEC 27001:2022 certified ISMS for Digital Clipboard (July 2026 press release).
+
+## Contact
+- [Request a demo](https://datamyte.com/contact-us/) · info@datamyte.com · 1-800-455-4359

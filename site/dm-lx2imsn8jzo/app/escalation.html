@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Defects & escalations · Concept UI</title><link rel="stylesheet" href="app.css"></head><body>
+<div class="cbar" role="note">Concept UI by chrismai.ai, not DataMyte's actual software · Sample data</div>
+<div class="app"><nav class="side" aria-label="App"><div class="brand">Digital Clipboard<small>Concept · Sample Plant (fictional)</small></div><a href="dashboard.html" class=""><i></i>Dashboard</a><a href="builder.html" class=""><i></i>Workflow Builder</a><a href="inspection.html" class=""><i></i>Inspections</a><a href="escalation.html" class="on"><i></i>Escalations</a><a href="capa.html" class=""><i></i>Corrective Actions</a><a href="spc.html" class=""><i></i>SPC Analytics</a><a href="ai.html" class=""><i></i>AI Studio</a><a href="reports.html" class=""><i></i>Reports & Traceability</a></nav>
+<main class="main"><div class="top"><h1>Defects & escalations</h1><span class="chip sample">SAMPLE DATA</span><span class="chip">Sample Plant A · Seat-frame weld &amp; assembly (fictional tier-1)</span><span class="sp"></span></div>
+<div class="grid g12">
+<div class="card"><h2>Defect log (sample)</h2><table><thead><tr><th>Time</th><th>Line</th><th>Defect</th><th>Status</th></tr></thead><tbody>
+<tr><td>10:42</td><td>3</td><td>Torque out of spec, C</td><td><span class="tag bad">Escalated</span></td></tr>
+<tr><td>10:15</td><td>3</td><td>Missed layered audit</td><td><span class="tag warn">Assigned</span></td></tr>
+<tr><td>09:58</td><td>1</td><td>Weld spatter</td><td><span class="tag info">CAPA-0142</span></td></tr>
+<tr><td>08:31</td><td>2</td><td>Missing clip</td><td><span class="tag ok">Closed</span></td></tr>
+<tr><td>07:12</td><td>4</td><td>Label mismatch</td><td><span class="tag ok">Closed</span></td></tr></tbody></table></div>
+<div class="card"><h2>Actions Builder · Torque escalation plan</h2>
+<div class="step done"><span>1</span><div><b>Trigger</b><div class="muted">Any torque reading outside 23.0–27.0 Nm on Track assembly form</div></div></div>
+<div class="step done"><span>2</span><div><b>Notify Line 3 supervisor</b><div class="muted">On-device notification + email · sent 10:42 · acknowledged 10:44</div></div></div>
+<div class="step done"><span>3</span><div><b>Assign task: contain suspect parts</b><div class="muted">Quarantine last 20 parts, re-check torque · assigned to Supervisor (sample)</div></div></div>
+<div class="step"><span>4</span><div><b>If not closed in 30 min → escalate to Quality Manager</b><div class="muted">Timer running: 18 min left</div></div></div>
+<div class="step"><span>5</span><div><b>If repeated 3× in a shift → open corrective action</b><div class="muted">Creates CAPA with inspection data attached <span class="imag">Imagined UI</span></div></div></div>
+<div style="margin-top:10px;display:flex;gap:8px"><span class="btn">Acknowledge</span><span class="btn g">Reassign</span><span class="btn g">Open CAPA</span></div></div></div>
+<p class="src">Feature names from DataMyte's public pages: <a href="https://datamyte.com/digital-clipboard-features/">Digital Clipboard Features</a> · <a href="https://datamyte.com/escalate/">Escalate</a>. Layout, data and anything marked “Imagined UI” are a concept by chrismai.ai.</p></main></div></body></html>

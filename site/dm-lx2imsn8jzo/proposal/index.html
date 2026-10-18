@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Proposal: datamyte.com redesign + studio partnership | chrismai.ai</title>
+<meta name="description" content="An unsolicited proposal from chrismai.ai to rebuild datamyte.com as a fast, accessible site with a clear trial/demo path and AI chat, then reuse the playbook across future ventures.">
+<style>
+:root{--ink:#0d1726;--muted:#4a5568;--blue:#0b3d91;--line:#dde3ea;--bg:#f5f7fa}
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:#0a4fc2}a:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px}
+.concept{background:#fff4d6;color:#4a3800;font-size:14px;text-align:center;padding:8px 16px;border-bottom:1px solid #f0d58a}
+main{max-width:860px;margin:0 auto;padding:48px 22px 80px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.08;letter-spacing:-.02em;margin:10px 0 14px}
+h2{font-size:28px;letter-spacing:-.01em;margin:56px 0 14px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:19px;margin:24px 0 6px}
+.lead{font-size:20px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--bg)}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.good{color:#0b5e2e;font-weight:700}.bad{color:#8f1d1d;font-weight:700}
+.opts{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px}
+.opt{border:1px solid var(--line);border-radius:16px;padding:22px}.opt.rec{border:2px solid var(--blue)}
+.opt h3{margin-top:0}.price{font-size:26px;font-weight:800;margin:6px 0}.opt ul{padding-left:18px;margin:10px 0 0;font-size:15px;color:var(--muted)}
+.badge{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--blue);border-radius:999px;padding:3px 10px}
+.btn{display:inline-block;border-radius:999px;padding:12px 22px;font-weight:600;text-decoration:none;border:2px solid var(--blue);margin:6px 8px 0 0}.btn.pri{background:var(--blue);color:#fff}.btn.sec{color:var(--blue)}
+.small{font-size:14px;color:var(--muted)}
+.box{background:var(--bg);border-radius:14px;padding:18px 20px}
+footer{border-top:1px solid var(--line);padding:24px 22px;font-size:13px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="concept" role="note">Unsolicited concept; not affiliated with or endorsed by DataMyte.</div>
+<main id="main">
+<div class="eyebrow">Proposal · prepared Oct 17, 2026</div>
+<h1>A faster datamyte.com, then a playbook for every venture after it.</h1>
+<p class="lead">For Joel Ronning and the DATAMYTE marketing team, from Chris Mai, chrismai.ai, a solo AI web and agent studio.</p>
+<p><a class="btn pri" href="../">View the concept homepage</a><a class="btn sec" href="#pricing">Jump to pricing</a></p>
+<p class="small">Also in this preview: <a href="../tour/">App tour</a> (8 concept screens) · <a href="../manual/">User manual in 13 languages</a> · <a href="../vision/">Vision: RFC for an agent-ready Digital Clipboard</a> · <a href="../showcase/">Showcase of everything</a></p>
+
+<h2>Why now</h2>
+<p>Digital Clipboard has had a big year: CONVERT-ai and Compose-ai launched in 2025, QPS PRO followed in January, and the platform earned ISO/IEC 27001:2022 certification in July. The website should sell that story as fast as the product works. On a phone today, it doesn't.</p>
+
+<h2>What we found</h2>
+<p class="small">Lighthouse 12, run Oct 17, 2026 (Pacific time) on datamyte.com's homepage. Mobile uses Lighthouse's simulated mid-range phone on a slow 4G connection. These are lab numbers and vary a little between runs.</p>
+<table>
+<thead><tr><th>Finding</th><th>Measured</th></tr></thead>
+<tbody>
+<tr><td>Mobile performance score</td><td class="n bad">47 / 100</td></tr>
+<tr><td>Largest content visible (mobile LCP)</td><td class="n bad">22.4 s</td></tr>
+<tr><td>Page weight and requests (mobile)</td><td class="n">3.95 MB · 202 requests</td></tr>
+<tr><td>Main thread blocked by third-party scripts</td><td class="n">890 ms (Google Tag Manager 689 ms)</td></tr>
+<tr><td>Homepage chat widget</td><td>Throws <code>demo_chatbot is not defined</code>; its frame has no accessible title</td></tr>
+<tr><td>Color-contrast failures</td><td class="n">21 elements</td></tr>
+<tr><td>Links with no accessible name</td><td class="n">2</td></tr>
+<tr><td>Hero call to action</td><td>A generic "Learn More"; no "Start trial" or "Request a demo" in the hero</td></tr>
+<tr><td>Meta description / share image</td><td>84 characters / <code>Untitled-1.png</code> (2023)</td></tr>
+<tr><td>Desktop performance</td><td class="n good">92 / 100 (desktop is fine; mobile is the gap)</td></tr>
+</tbody></table>
+
+<h2>What we'd do</h2>
+<ul>
+<li><strong>Rebuild for speed:</strong> a lightweight theme on your existing WordPress, so marketing keeps editing, with a performance budget, deferred tags and properly sized images.</li>
+<li><strong>Make the next step obvious:</strong> "Start your 14-day free trial" and "Request a demo" in the hero, the header and the closing section, with your existing forms kept.</li>
+<li><strong>Accessible by default:</strong> target WCAG 2.2 AA: contrast, link names, focus states and a real skip link.</li>
+<li><strong>An AI chat that works:</strong> answers from DataMyte-approved content (pricing, trial, AI features, security) and hands off to sales. The concept shows a scripted version of this.</li>
+<li><strong>Optional AI-readable layer:</strong> structured data plus an <a href="../llms.txt">llms.txt sketch</a>. Your robots.txt currently blocks AI crawlers such as GPTBot and Google-Extended, so whether to open that up is your call.</li>
+<li><strong>Tighter copy, same facts:</strong> every claim in the concept comes from datamyte.com. No invented stats or testimonials.</li>
+</ul>
+
+<h2>Before and after</h2>
+<p class="small">Same Lighthouse version and settings, run on the live datamyte.com homepage and on the deployed concept page, Oct 17, 2026 (Pacific time).</p>
+<table>
+<thead><tr><th>Metric (mobile)</th><th>datamyte.com today</th><th>Concept</th></tr></thead>
+<tbody>
+<tr><td>Performance</td><td class="n bad">47</td><td class="n good">100</td></tr>
+<tr><td>Accessibility</td><td class="n">82</td><td class="n good">100</td></tr>
+<tr><td>Best practices</td><td class="n">75</td><td class="n good">100</td></tr>
+<tr><td>SEO</td><td class="n">92</td><td class="n">63*</td></tr>
+<tr><td>LCP</td><td class="n bad">22.4 s</td><td class="n good">1.1 s</td></tr>
+<tr><td>Page weight</td><td class="n">3.95 MB</td><td class="n good">10 KB</td></tr>
+<tr><td>Requests</td><td class="n">202</td><td class="n good">2</td></tr>
+</tbody></table>
+<p class="small">* The concept's only SEO failure is "page is blocked from indexing", because this preview is deliberately set to noindex. Every other SEO check passes. A re-run of datamyte.com at 7:59 PM PT scored 49, with a 19.9 s LCP. Desktop: the concept scores 100 across performance, accessibility and best practices, against datamyte.com's 92 / 81 / 70.</p>
+<p class="small">The concept is a single static page without your analytics or marketing tags. A production build will add some of those back, and we'd hold a mobile performance target of 90+ as part of the scope.</p>
+
+<h2>A studio partnership, not a one-off</h2>
+<p>Joel Ronning founded Digital River in 1994 and led it as CEO until 2012. He has been Chairman and CEO of ASI DataMyte and CEO of Open Road Ventures since 2013. That's a builder's track record, and builders start new things. The playbook we'd prove on datamyte.com (a fast site, a clear conversion path, an AI chat and an optional agent endpoint) is meant to be reused: a new property for a future venture starts from a tested design system and chat stack instead of from scratch.</p>
+<p class="small">Sources: <a href="https://www.sec.gov/Archives/edgar/data/1062530/000115752312005644/a50463035ex99_1.htm">Digital River 8-K exhibit, Nov 1, 2012</a>; <a href="https://www.linkedin.com/in/joel-ronning-1a198112">Joel Ronning on LinkedIn</a>.</p>
+
+<h2 id="localization">Localization and automotive readiness</h2>
+<p>To show what the shop-floor side could look like, we built an <a href="../tour/">app tour</a> of eight concept screens for a fictional automotive tier-1 plant: tablet torque inspection, escalation, 8D, SPC and IATF 16949 / PPAP traceability. We also wrote a <a href="../manual/">user manual</a> in the 10 most-spoken languages (Ethnologue 2026) plus German, Japanese and Korean.</p>
+<ul><li><strong>What it is:</strong> concept UI by chrismai.ai, not DataMyte's software. The feature names come from DataMyte's public pages and the data is sample data.</li>
+<li><strong>What it isn't:</strong> the translations are machine-assisted and need native-speaker review before real use. Arabic and Urdu are laid out right-to-left. We make no claim of IATF 16949 certification, AIAG/VDA compliance, or that these workflows have been validated in a plant. That remains DataMyte's and its customers' call.</li>
+<li><strong>What a real engagement adds:</strong> localized marketing pages for priority markets, with hreflang tags and RTL support; native review by vetted subcontracted linguists; automotive landing pages whose wording DataMyte's quality team approves.</li></ul>
+<p>The longer-term engineering idea, an agent-ready Digital Clipboard with A2A/MCP, edge sync and AI inspection, is written up as an RFC on the <a href="../vision/">vision page</a>.</p>
+
+<h2>Timeline</h2>
+<table><tbody>
+<tr><td class="n">Week 0</td><td>Kickoff fee, access to WordPress and brand assets, one point of contact</td></tr>
+<tr><td class="n">Week 1</td><td>Discovery, content and analytics audit, page list, performance budget</td></tr>
+<tr><td class="n">Weeks 2–3</td><td>Design system, homepage and core templates in staging</td></tr>
+<tr><td class="n">Weeks 4–5</td><td>Build on WordPress, forms and trial/demo flows, AI chat on approved content</td></tr>
+<tr><td class="n">Week 6</td><td>QA, accessibility and Lighthouse checks, redirects and SEO, launch</td></tr>
+<tr><td class="n">Then</td><td>Monthly care, or the partnership cadence: one new property or major page set every 30–45 days</td></tr>
+</tbody></table>
+
+<h2 id="pricing">Pricing</h2>
+<p>Every option starts with a kickoff / partnership onboarding fee, paid before work begins. Monthly plans follow chrismai.ai's published tiers, with 10% off when paid annually.</p>
+<div class="opts">
+ <div class="opt"><h3>1 · Redesign + Growth care</h3>
+  <div class="price">$24,000 build</div>
+  <div>Kickoff / onboarding fee: <strong>$12,000</strong> before work starts; $12,000 at launch.<br>Then Growth care: <strong>$1,500/mo</strong> ($16,200/yr prepaid).</div>
+  <ul><li>Homepage plus up to 8 core templates</li><li>Mobile performance 90+ target, WCAG 2.2 AA target</li><li>Trial/demo conversion path, existing forms kept</li><li>AI chat v1 on approved content</li><li>Monthly updates, monitoring and small changes</li></ul></div>
+ <div class="opt"><h3>2 · Redesign + AI agent (Enterprise)</h3>
+  <div class="price">$24,000 build</div>
+  <div>Kickoff / onboarding fee: <strong>$12,000</strong> before work starts; $12,000 at launch.<br>Then Enterprise: <strong>$5,000/mo</strong> ($54,000/yr prepaid).</div>
+  <ul><li>Everything in option 1</li><li>AI chat with sales handoff, plus an optional agent endpoint and llms.txt</li><li>New landing pages and conversion tests every month</li><li>Quarterly performance and accessibility audits, priority response</li></ul></div>
+ <div class="opt rec"><span class="badge">Best long-term value</span><h3>3 · Studio partnership (multi-venture)</h3>
+  <div class="price">$30,000 founding-partner fee</div>
+  <div>Paid before work starts. It <strong>covers the full DataMyte redesign build</strong> plus a reusable playbook: design system, performance budget, chat and agent stack.<br>Then an Enterprise portfolio retainer: <strong>$9,500/mo</strong> for DataMyte plus up to 2 more properties or ventures, on a 12-month term ($102,600/yr prepaid). Each extra property is $2,500/mo.</div>
+  <ul><li>Everything in option 2, for every property</li><li>A new venture site, from brief to launch, in about 30–45 days</li><li>One studio, one playbook, one point of contact</li></ul></div>
+</div>
+<p><strong>Optional add-on, localization:</strong> $1,500 per language for machine translation with native post-editing and review of the manual and key site pages, plus RTL and layout QA. All 12 non-English languages for $15,000. Published 2026 benchmarks: website or app localization runs about $500–$5,000+ per language (<a href="https://www.biztoolkit.co/post/translation-localization-rates-in-2026-per-word-per-hour-per-project">Biztoolkit</a>). Post-edited machine translation runs about $0.06–$0.12 per word and human translation about $0.07–$0.14 (<a href="https://alconost.com/en/blog/localization-cost">Alconost</a>). Specialist automotive translation runs €0.18–€0.30 per word (<a href="https://circletranslations.com/blog/how-much-does-technical-translation-cost">Circle Translations</a>).</p>
+<p class="small">Fixed scope per option. Hosting and third-party licenses are billed at cost. For context, published 2026 benchmarks put B2B SaaS redesigns at $15,000–$80,000 for boutique studios and $30,000–$75,000 for lower mid-market B2B, and design retainers at $2,500–$8,000 per month. Sources: <a href="https://lineanddotstudio.com/blog/b2b-saas-website-redesign-cost-roi/">Line &amp; Dot</a>, <a href="https://webdelo.com/blog/website-redesign-cost-2026">Webdelo</a>, <a href="https://www.daasign.io/topics/web-design-agency-for-saas">Daasign</a>.</p>
+
+<h2>Who you'd work with</h2>
+<p>Chris Mai runs chrismai.ai, a solo studio. To be upfront: it's early-stage, and you'd work directly with the person building it. The studio runs its own live agent-to-agent (A2A) agent at agents.chrismai.ai and built chatwithhuman.ai. There is no existing relationship with DataMyte.</p>
+
+<h2>Next steps</h2>
+<div class="box">
+<p style="margin-top:0">No call needed. Pick whichever is easiest:</p>
+<p><a class="btn pri" href="https://chrismai.ai">Chat on chrismai.ai</a><a class="btn sec" href="https://chatwithhuman.ai">Chat on chatwithhuman.ai</a><a class="btn sec" href="mailto:hi@chrismai.ai?subject=datamyte.com%20proposal">Email hi@chrismai.ai</a></p>
+<p class="small" style="margin-bottom:0">Not ready to commit? Ask for the free one-page audit of any two other pages on datamyte.com.</p>
+</div>
+</main>
+<footer>Unsolicited concept; not affiliated with or endorsed by DataMyte. DATAMYTE and Digital Clipboard are trademarks of their owner.<br>chrismai.ai · hi@chrismai.ai · 1501 Lincoln Blvd #1134, Venice, CA 90291 · This page is not indexed.</footer>
+</body>
+</html>

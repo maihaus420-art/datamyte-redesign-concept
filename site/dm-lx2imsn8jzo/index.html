@@ -133,7 +133,77 @@ html.mh-open{overflow:hidden}html.mh-open .mh::before{background:#fff}
 @media (min-width:901px){.mh-sheet,.mh-scrim{display:none!important}}
 @media (max-width:420px){.mh-brand small{display:none}.mh-btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
 @media (prefers-reduced-motion:reduce){.mh-sheet{animation:none}.mh-btn .ic path{transition:none}.mh-btn:active,.mh-row:active,.mh-cta:active{transform:none}}
-</style><style>#chatbtn{display:inline-flex;align-items:center;gap:8px;min-height:48px;right:calc(18px + env(safe-area-inset-right))!important;bottom:calc(18px + env(safe-area-inset-bottom))!important}#chatbtn .ic{width:20px;height:20px}#chat{bottom:calc(76px + env(safe-area-inset-bottom))!important}#chatbtn:focus-visible{outline:2px solid #0b3d91;outline-offset:3px}</style><meta name="theme-color" content="#ffffff"></head>
+</style><style>#chatbtn{display:inline-flex;align-items:center;gap:8px;min-height:48px;right:calc(18px + env(safe-area-inset-right))!important;bottom:calc(18px + env(safe-area-inset-bottom))!important}#chatbtn .ic{width:20px;height:20px}#chat{bottom:calc(76px + env(safe-area-inset-bottom))!important}#chatbtn:focus-visible{outline:2px solid #0b3d91;outline-offset:3px}</style><meta name="theme-color" content="#ffffff"><style id="lab-css">
+:root{--mono:ui-monospace,"SF Mono",SFMono-Regular,"JetBrains Mono",Menlo,Consolas,monospace;--lab-grid:rgba(11,61,145,.045)}
+body{background-image:linear-gradient(var(--lab-grid) 1px,transparent 1px),linear-gradient(90deg,var(--lab-grid) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px;counter-reset:sec}
+.eyebrow,.ey,.lab-k,th,code,kbd{font-family:var(--mono)}
+.eyebrow,.ey{letter-spacing:.06em}
+th{font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+td,.n{font-variant-numeric:tabular-nums}
+main h2,section.sec h2,#main section h2{counter-increment:sec}
+main h2::before,section.sec h2::before,#main section h2::before{content:"§" counter(sec,decimal-leading-zero);display:block;font:500 12px/1.4 var(--mono);letter-spacing:.1em;color:#56627a;margin-bottom:6px}
+.lab h2::before,.lab-skip::before{content:none!important}
+.lab-k{display:block;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mute,#56627a)}
+.lab{--bg:#fff;--fg:#0b1b33;--mute:#56627a;--line:#dde3ec;--acc:#0b3d91;--al:#c4320a;text-align:left;color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.lab.dark{--bg:rgba(255,255,255,.045);--fg:#f5f5f7;--mute:#a7adba;--line:rgba(255,255,255,.16);--acc:#8fb4ff;--al:#ff8a5c}
+.lab-c{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px}
+.lab.dark .lab-c{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.lab-g{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:900px){.lab-g{grid-template-columns:1.6fr 1fr}}
+.lab-h{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.lab-h b{font-size:15px;font-weight:650}
+.lab-svg{aspect-ratio:640/230;width:100%}
+.lab-svg svg{width:100%;height:100%;display:block}
+.lab-svg .p1{fill:var(--acc);opacity:.06}.lab-svg .lim{stroke:var(--al);stroke-dasharray:4 4;stroke-width:1}.lab-svg .cl{stroke:var(--mute);stroke-width:1}
+.lab-svg .ln{fill:none;stroke:var(--acc);stroke-width:1.4;stroke-linejoin:round}.lab-svg .al{stroke:var(--al);stroke-width:3;stroke-linecap:round}
+.lab-svg .fm{fill:none;stroke:var(--al);stroke-width:1.75}.lab-svg .ld,.lab-svg .dim{stroke:var(--mute);stroke-width:1;fill:none}
+.lab-svg text{font:10px var(--mono);fill:var(--mute)}.lab-svg .an{fill:var(--al);font-weight:600}
+.lab-st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 12px;margin:10px 0 0;padding:10px 0 0;border-top:1px solid var(--line)}
+
+.lab-st b{display:block;font:600 14px/1.3 var(--mono);font-variant-numeric:tabular-nums;color:var(--fg)}
+.lab-src{margin:10px 0 0;font-size:12px;line-height:1.45;color:var(--mute)}.lab-src a{color:inherit;text-decoration:underline}
+.lab-m{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.lab-m b{display:block;font:600 22px/1.15 var(--mono);font-variant-numeric:tabular-nums;color:var(--fg);letter-spacing:-.02em}
+.lab-m small{display:block;font-size:11.5px;line-height:1.35;color:var(--mute)}
+.lab-arch{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch;margin:0;padding:0;list-style:none}
+.lab-arch li{flex:1 1 140px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--bg);font-size:13px;line-height:1.35;position:relative}
+.lab-arch li b{display:block;font-size:13.5px}.lab-arch li a{color:inherit}
+.lab-arch li small{display:block;color:var(--mute);font-size:11.5px;margin-top:2px}
+.lab-chip{display:inline-block;font:600 10px/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:0 6px;margin-bottom:4px;color:#0b5e2e;background:#e3f4e8}
+.lab.dark .lab-chip{color:#7ee2a0;background:rgba(48,209,88,.14)}
+.lab-chip.pr{color:#7a4a00;background:#fff1d6}.lab.dark .lab-chip.pr{color:#ffd28a;background:rgba(255,186,73,.15)}
+.lab-bm{display:grid;gap:10px;grid-template-columns:1fr;margin:0;padding:0;list-style:none}
+@media(min-width:700px){.lab-bm{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.lab-bm{grid-template-columns:repeat(4,1fr)}}
+.lab-bm li{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg)}
+.lab-bm b{display:block;font-size:14.5px;margin:2px 0 6px}.lab-bm .t{font:600 15px/1.3 var(--mono);color:var(--acc)}.lab-bm small{display:block;color:var(--mute);font-size:12px;line-height:1.4;margin-top:6px}
+.lab-sec{margin:14px 0 0}.lab-sec>.lab-k{margin:0 0 8px}
+.lab-lens{border:1px solid #dde3ec;border-left:3px solid #0b3d91;border-radius:12px;background:#fff;padding:14px 16px;margin:24px 0}
+.lab-lens ol{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:8px;grid-template-columns:1fr}
+@media(min-width:800px){.lab-lens ol{grid-template-columns:repeat(3,1fr)}}
+.lab-lens li{font-size:14.5px;line-height:1.45;color:#22324a}.lab-lens li b{display:block;font-size:13px;font-family:var(--mono);color:#0b3d91;letter-spacing:.02em}
+.roi{border:1px solid #dde3ec;border-radius:16px;background:#fff;padding:18px;margin:24px 0;color:#0b1b33;text-align:left}
+.roi h2,.roi h3{margin:0 0 4px!important;border:0!important;padding:0!important;font-size:22px}
+.roi>p{margin:0 0 12px;color:#56627a;font-size:14px}
+.roi-f{display:grid;gap:10px 14px;grid-template-columns:1fr}
+@media(min-width:700px){.roi-f{grid-template-columns:repeat(2,1fr)}}@media(min-width:1050px){.roi-f{grid-template-columns:repeat(5,1fr)}}
+.roi-i{display:flex;flex-direction:column;gap:4px;font-size:13px}
+.roi-l{font-weight:600;line-height:1.3}
+.roi-i input{font:600 16px var(--mono);min-height:44px;padding:8px 10px;border:1px solid #c9d2df;border-radius:10px;background:#f8fafc;color:#0b1b33;width:100%}
+.roi-i input:focus-visible{outline:2px solid #0b3d91;outline-offset:1px}
+.roi-s{font-size:11.5px;line-height:1.35;color:#56627a}.roi-s a{color:#56627a}
+.roi-o{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px;padding:14px;border-radius:12px;background:#0b1b33;color:#fff}
+@media(min-width:800px){.roi-o{grid-template-columns:repeat(4,1fr)}}
+.roi-o .lab-k{color:#a9b6cc}.roi-o b{display:block;font:600 24px/1.2 var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.roi-x{margin-top:10px;font-size:13.5px;color:#22324a}.roi-x summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;color:#0b3d91}
+.roi-x pre{font:12.5px/1.6 var(--mono);background:#f3f6fa;border-radius:10px;padding:12px;overflow:auto;color:#0b1b33}
+.roi-ph{min-height:420px}
+.lab-spec{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin:18px auto 0;padding:0;list-style:none;max-width:860px;border:1px solid #dde3ec;border-radius:12px;background:rgba(255,255,255,.85);overflow:hidden}
+.lab-spec li{flex:1 1 120px;padding:10px 12px;border-right:1px solid #dde3ec;border-bottom:1px solid #dde3ec;margin:-0 -1px -1px 0;text-align:left}
+.lab-spec b{display:block;font:600 16px/1.25 var(--mono);color:#0b1b33;font-variant-numeric:tabular-nums}
+.lab-spec small{display:block;font:500 10.5px/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#56627a}
+.lab-cap{font:500 11px/1.4 var(--mono);color:#56627a;margin:6px 0 0;letter-spacing:.04em}
+@media(max-width:600px){.hero .sub{display:none}.hero{padding-top:28px!important}.hero h1{font-size:34px!important;margin:6px auto 12px!important}.hero .cta{margin-bottom:0}main h1{font-size:30px}.lead{font-size:17px}}
+</style></head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <div class="concept" role="note">Unsolicited concept by chrismai.ai; not affiliated with or endorsed by DataMyte. All product facts are from datamyte.com. <a href="proposal/">Read the proposal</a> · <a href="tour/">App tour</a> · <a href="manual/">Manuals</a> · <a href="vision/">Vision</a> · <a href="showcase/">Showcase</a></div>
@@ -148,7 +218,7 @@ html.mh-open{overflow:hidden}html.mh-open .mh::before{background:#fff}
    <a class="btn pri" href="https://datamyte.com/digital-clipboard-sign-up/">Start your 14-day free trial</a>
    <a class="btn sec" href="https://datamyte.com/contact-us/">Request a demo</a>
   </div>
-  <p class="fine">No obligation. Plans from $19 per user/month, billed annually. <a href="https://datamyte.com/pricing/">See pricing</a></p>
+  <p class="fine">No obligation. Plans from $19 per user/month, billed annually. <a href="https://datamyte.com/pricing/">See pricing</a></p><ul class="lab-spec" aria-label="Public figures per datamyte.com"><li><b>1,000+</b><small>manufacturers served</small></li><li><b>50+ yrs</b><small>in business</small></li><li><b>27001:2022</b><small>ISO/IEC, Digital Clipboard ISMS</small></li><li><b>10,000+</b><small>templates</small></li><li><b>25+</b><small>data elements</small></li><li><b>$19 / $39</b><small>per user / month</small></li></ul><p class="lab-cap">Public figures as stated on datamyte.com. Not measured by chrismai.ai.</p>
   <div class="mock" role="img" aria-label="Illustration: a torque inspection checklist on the left and an automatic escalation on the right">
    <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
    <div class="body" aria-hidden="true">
@@ -238,7 +308,7 @@ html.mh-open{overflow:hidden}html.mh-open .mh::before{background:#fff}
  </div>
 </section>
 
-<section class="final alt">
+<section id="roi-sec"><div class="wrap"><aside class="lab-lens" aria-label="Profit lens"><span class="lab-k">Profit lens · where this shows up in money</span><ol><li><b>Inspector hours</b>Paper audits get re-keyed and filed. Capturing data once at the point of inspection removes that step (modeled below).</li><li><b>Rework and escapes</b>Errors stopped at entry never become bad records. Validated fields and photos at capture cut investigation time.</li><li><b>Earlier drift alarms</b>On real fab data, an EWMA flags a small sustained shift at lot 503 that a points-only chart signals once in 1,060 lots. Earlier signal, less scrap.</li></ol></aside><section class="roi lab-skip" aria-labelledby="roi-t"><span class="lab-k">ROI model · vanilla JS · runs locally</span><h2 id="roi-t" class="lab-skip">What paper costs you: a model you can edit</h2><p>Edit any input. Defaults are labeled: sourced where we could find a public source, “modeled assumption” where we couldn’t. Outputs are a model, not DataMyte or client results.</p><div data-roi class="roi-ph"><p class="lab-src">Turn on JavaScript to use the calculator. Formula: hours saved = inspectors × audits/week × weeks × minutes × share ÷ 60.</p></div></section></div></section><section class="final alt">
  <div class="wrap">
   <h2>Try Digital Clipboard free for 14 days.</h2>
   <p class="sub" style="margin:0 auto 28px">Build your first workflow today. No obligation.</p>
@@ -273,5 +343,5 @@ if(r)r.addEventListener('click',function(){set(false);b.focus();});
 s.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
 document.addEventListener('keydown',function(e){if(b.getAttribute('aria-expanded')!=='true')return;if(e.key==='Escape'){set(false);b.focus();}
  else if(e.key==='Tab'){var f=[b].concat([].slice.call(s.querySelectorAll('a,button'))),i=f.indexOf(document.activeElement);if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus();}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus();}}});
-var mq=window.matchMedia('(min-width:'+(h.getAttribute('data-bp')||1001)+'px)');(mq.addEventListener?mq.addEventListener('change',function(m){if(m.matches)set(false);}):0);})();</script></body>
+var mq=window.matchMedia('(min-width:'+(h.getAttribute('data-bp')||1001)+'px)');(mq.addEventListener?mq.addEventListener('change',function(m){if(m.matches)set(false);}):0);})();</script><script src="/dm-lx2imsn8jzo/lab.js" defer></script></body>
 </html>

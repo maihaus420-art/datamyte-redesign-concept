@@ -12,9 +12,11 @@ Static HTML/CSS only (no build step, no backend):
 |---|---|
 | `site/dm-lx2imsn8jzo/` | Concept homepage for datamyte.com with a demo chat widget that answers from public pages |
 | `site/dm-lx2imsn8jzo/proposal/` | One-page proposal |
-| `site/dm-lx2imsn8jzo/app/` | Ten concept app screens (HTML) on one design system: nine for a fictional automotive tier-1 plant (including a multi-plant global view) and one SiC/GaN power-semiconductor quality view |
+| `site/dm-lx2imsn8jzo/app/` | Fifteen concept app screens (HTML) on one design system: nine for a fictional automotive tier-1 plant (including a multi-plant global view), one SiC/GaN power-semiconductor quality view, and five product-suite concept screens |
 | `site/dm-lx2imsn8jzo/tour/` | App tour gallery |
 | `site/dm-lx2imsn8jzo/manual/` | User manual in 13 languages, with a language switcher |
+| `site/dm-lx2imsn8jzo/products/` | Product suite concept: DataMyte's established products (cited) mapped to five new-era SaaS concepts, one page and one screen each |
+| `site/dm-lx2imsn8jzo/credits/` | Photo and data credits |
 | `site/dm-lx2imsn8jzo/showcase/` | Showcase of everything above |
 
 Live preview (noindex): https://chrismai-proposals.chrismai.workers.dev/dm-lx2imsn8jzo/showcase/
@@ -26,6 +28,15 @@ Live preview (noindex): https://chrismai-proposals.chrismai.workers.dev/dm-lx2im
 - The vision RFC and Methods pages linked from the screens are on the live preview only and are not part of this repo.
 - **Translations are machine-assisted** and need native-speaker review. Arabic and Urdu use right-to-left layouts.
 - No existing DataMyte relationship, integration or endorsement is claimed.
+
+## Photos and datasets
+
+Third-party material keeps its own license; the all-rights-reserved notice below covers only chrismai.ai's own work.
+
+- Photos: Unsplash (Unsplash License), Wikimedia Commons (CC BY 2.0/3.0/4.0, CC0, public domain) and NIST (US government work). Each is credited with author, source and license in its caption and on `credits/`. No DataMyte photos or logos.
+- The one CC BY-SA photo (SiC wafers, FDominec, CC BY-SA 4.0) is **not** in this repo; it appears on the live preview only.
+- Defect images: VisA (Zou et al., ECCV 2022), CC BY 4.0; boxes are drawn from the dataset's ground-truth masks.
+- Data: piston rings (Montgomery, via qcc), UCI SECOM (CC BY 4.0), NIST/SEMATECH e-Handbook MPC61 (US government work), PyScrew s01 (West & Deuse, CC BY 4.0), OICA 2024, Natural Earth (public domain).
 
 ## License
 

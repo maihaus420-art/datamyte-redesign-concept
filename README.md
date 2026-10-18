@@ -15,6 +15,7 @@ Static HTML/CSS only (no build step, no backend):
 | `site/dm-lx2imsn8jzo/app/` | Fifteen concept app screens (HTML) on one design system: nine for a fictional automotive tier-1 plant (including a multi-plant global view), one SiC/GaN power-semiconductor quality view, and five product-suite concept screens |
 | `site/dm-lx2imsn8jzo/tour/` | App tour gallery |
 | `site/dm-lx2imsn8jzo/manual/` | User manual in 13 languages, with a language switcher |
+| `site/dm-lx2imsn8jzo/docs/` | Concept technical manuals for the five concept products (English; not DataMyte software, no certification claimed) |
 | `site/dm-lx2imsn8jzo/products/` | Product suite concept: DataMyte's established products (cited) mapped to five new-era SaaS concepts, one page and one screen each |
 | `site/dm-lx2imsn8jzo/credits/` | Photo and data credits |
 | `site/dm-lx2imsn8jzo/showcase/` | Showcase of everything above |

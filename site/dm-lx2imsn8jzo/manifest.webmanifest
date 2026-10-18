@@ -1,0 +1,30 @@
+{
+ "name": "DataMyte concept by chrismai.ai",
+ "short_name": "DataMyte concept",
+ "description": "Unsolicited concept by chrismai.ai; not affiliated with or endorsed by DataMyte.",
+ "start_url": "/dm-lx2imsn8jzo/",
+ "scope": "/dm-lx2imsn8jzo/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#0b3d91",
+ "icons": [
+  {
+   "src": "/dm-lx2imsn8jzo/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/dm-lx2imsn8jzo/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/dm-lx2imsn8jzo/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}

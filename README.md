@@ -18,8 +18,11 @@ Static HTML/CSS only (no build step, no backend):
 | `site/dm-lx2imsn8jzo/products/` | Product suite concept: DataMyte's established products (cited) mapped to five new-era SaaS concepts, one page and one screen each |
 | `site/dm-lx2imsn8jzo/credits/` | Photo and data credits |
 | `site/dm-lx2imsn8jzo/showcase/` | Showcase of everything above |
+| `site/dm-lx2imsn8jzo/manifest.webmanifest` | Web app manifest and icon kit (SVG favicon, 32px PNG, ICO, 180px apple-touch-icon, 192/512 PNG and a maskable 512) |
 
 Live preview (noindex): https://chrismai-proposals.chrismai.workers.dev/dm-lx2imsn8jzo/showcase/
+
+Every page shares one header: inline links on wide screens and a 44px menu button on phones that opens a sheet of 52px rows, each with an icon from one custom line-icon set (24px grid, 1.75px stroke, `currentColor`). The sheet supports Escape to close, `aria-expanded`, `:focus-visible` rings and safe-area padding.
 
 ## Important caveats
 
